@@ -1,4 +1,4 @@
-ul {
+/* ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -7,6 +7,11 @@ ul {
   position: fixed;
   height: 100%;
   overflow: auto;
+} */
+
+:root {
+  --main-font: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Ubuntu, Arial, sans-serif;
 }
 
 .side-navbar {
@@ -23,13 +28,15 @@ ul {
 }
 
 .side-navbar-title {
-  margin-left: 5px;
+  margin-left: 10px;
+  font-family: var(--main-font);
 }
 
 .side-navbar-icon,
 .side-navbar-title {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
+  text-align: center;
 }
 
 @media screen and (max-width: 1200px) {
@@ -59,7 +66,7 @@ ul {
   background-color: inherit;
   color: black;
   padding: 20px 16px;
-  width: 100%;
+  /* width: 100%; */
   border: none;
   outline: none;
   text-align: left;
