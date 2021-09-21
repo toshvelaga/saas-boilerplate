@@ -4,8 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "./containers/Login/Login";
 import Register from "./containers/Register/Register";
 import ForgotPassword from "./containers/ForgotPassword/ForgotPassword";
-
-const Dashboard = lazy(() => import("./containers/Dashboard/Dashboard"));
+import Dashboard from "./containers/Dashboard/Dashboard";
 
 function App() {
   return (
@@ -14,21 +13,10 @@ function App() {
         {/* A <Switch> looks through its children <Routes> and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/dashboard">
-            <Suspense fallback={<div>Loading...</div>}>
-              <Dashboard />
-            </Suspense>
-          </Route>
-
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/register">
-            <Register />
-          </Route>
-          <Route path="/forgot-password">
-            <ForgotPassword />
-          </Route>
+          <Route path="/dashboard" component={Dashboard} />
+          <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
+          <Route path="/forgot-password" component={ForgotPassword} />
         </Switch>
       </Router>
     </>
