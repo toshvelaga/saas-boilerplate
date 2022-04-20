@@ -13,13 +13,27 @@ Frontend tech stack:
 - React Router
 - React Icons
 
+Backend tech stack:
+
+- Node JS
+- Express
+
 ## Installation
 
-To run this project, install it locally using npm:
+To run the client code follow these steps:
 
 ```
+$ cd client
 $ npm install
 $ npm start
+```
+
+To run the server code follow these steps:
+
+```
+$ cd server
+$ npm install
+$ node server.js
 ```
 
 ## Contribute
@@ -30,5 +44,4 @@ If you have any questions feel free to email me at toshvelaga@gmail.com
 
 ## License
 
-MIT 
-
+MIT
